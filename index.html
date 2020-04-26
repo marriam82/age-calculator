@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <meta http-equiv="X-UA-Compatible" content="ie=edge">
+          <title>Document</title>
+</head>
+<body>
+          <input type="text" placeholder="Enter your age">
+          <button id="btn" onclick="calAge()">Click</button>
+          <div class="days"></div>
+          <div class="months"></div>
+          <div class="hours"></div>
+          <div class="min"></div>
+          <div class="sec"></div>
+</body>
+<script> 
+        function calAge(){
+       var x=document.getElementsByTagName("input")[0].value
+       var months=x*12
+       var y = x*365
+       var h = y*24
+       var m = h*60
+       var s = m*60
+        document.getElementsByClassName("days")[0].innerHTML=(`Age in Days is ${y} `)      
+        document.getElementsByClassName("months")[0].innerHTML=(`Age in months is ${months}`)
+        document.getElementsByClassName("hours")[0].innerHTML=(`Age in hours is ${h}`)
+        document.getElementsByClassName("min")[0].innerHTML=(`Age in minutes is ${m} `)    
+        document.getElementsByClassName("sec")[0].innerHTML=(`Age in Seconds is ${s}`) 
+}
+</script>
+</html>
